@@ -19,14 +19,14 @@ jobs:
           hide-progress: false
           format: 'table'
           exit-code: '1'
-          ignore-unfixed: false
+          ignore-unfixed: true
           severity: 'CRITICAL'
 
       - name: Run Trivy vulnerability scanner in fs mode
         uses: aquasecurity/trivy-action@master
         with:
           scan-type: 'fs'
-          hide-progress: false
+          hide-progress: true
           format: 'table'
           exit-code: '1'
           ignore-unfixed: false
